@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Button from "../ui/button";
 import classes from "./EventItem.module.css";
 
 const EventItem = (props) => {
@@ -10,7 +10,7 @@ const EventItem = (props) => {
     year: "numeric",
   });
 
-  const formattedAddress = location.replace(",", "\n");
+  const formattedAddress = location.replace(", ", "\n");
 
   const exploreLink = `/events/${id}`;
 
@@ -28,7 +28,7 @@ const EventItem = (props) => {
           </div>
         </div>
         <div className={classes.actions}>
-          <Link href={exploreLink}>Explore Event</Link>
+          <Button link={exploreLink}>Explore Event</Button>
         </div>
       </div>
     </li>
