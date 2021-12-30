@@ -8,9 +8,7 @@ import { getEventById } from "../../dummy-data";
 const EventDetailPage = () => {
   const router = useRouter();
   const eventId = router.query.eventId;
-  console.log(eventId);
   const event = getEventById(eventId);
-  console.log(event);
 
   if (!event) {
     return <p>No event found</p>;
